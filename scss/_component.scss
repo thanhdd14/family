@@ -1,0 +1,78 @@
+@use "vars" as *;
+
+
+
+
+
+
+
+
+.c-al{
+	&--c{
+		text-align: center !important;
+	}
+	
+	&--r{
+		text-align: right !important
+	}
+	
+	&--l{
+		text-align: left !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================
+Component
+==================================================== */
+// Common Text style
+.c-txt{
+	&__basic{
+
+	}
+}
+
+
+
+
+//ttl
+.c-ttl{
+	&__01{
+
+	}
+
+}
+
+//btn
+.c-btn{
+	&__01{
+		display: inline-block;
+		padding: 10px 23px;
+		border-radius: 10px;
+		@include font-size(18);
+		line-height: 1.4;
+		color: white;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		@include smooth-transition;
+		background: $blue;
+		&:hover{
+			opacity: 0.7;
+		}
+		&--dark{
+			background: #4d4a4a;
+		}
+	}
+}
+
+

@@ -1,0 +1,185 @@
+@use "vars" as *;
+
+#header{
+	background: #176093;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	z-index: 999;
+	border-right: 1px solid #7f7676;
+	a{
+		color: white;
+	}
+	.header-logo{
+		@include flex(center,center,wrap);
+		height: 60px;
+		text-align: center;
+		@include font-size(30);
+		line-height: 1;
+		font-weight: bold;
+	}
+	.header-nav{
+
+		&__menu{
+			&-item{
+				position: relative;
+				border-top: 1px solid #7f7676;
+				a{
+					display: block;
+					color: white;
+					@include font-size(16);
+					font-weight: 600;
+					padding: 10px 20px 10px 50px;
+					position: relative;
+					i{
+						position: absolute;
+						@include v-align;
+						left: 20px;
+					}
+					&:hover{
+						background: $blue;
+						opacity: 1;
+					}
+				}
+				&:last-child{
+					a{
+						border-bottom: none;
+					}
+				}
+				ul{
+					display: none;
+					border-top: 1px solid #7f7676;
+
+					padding: 0 0 0 30px;
+					li{
+						border-bottom: 1px solid #7f7676;
+						&:last-child{
+							border-bottom: none;
+						}
+						a{
+							padding: 10px;
+						}
+					}
+				}
+				&.active{
+					>a{
+						background: $blue;
+					}
+					ul{
+						display: block;
+					}
+				}
+			}
+			&-sub{
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 42px;
+				width: 50px;
+				@include flex(center,center);
+				color: white;
+				cursor: pointer;
+				@include font-size(25);
+				&:before,&:after{
+					content: "";
+					background: white;
+					position: absolute;
+					@include v-align;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+				}
+				&:before{
+					content: "";
+					width: 15px;
+					height: 2px;
+				}
+				&:after{
+					width: 2px;
+					height: 15px;
+				}
+				&.active{
+					&:after{
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+		}
+	}
+	.js-mobile {
+		width: 26px;
+		height: 30px;
+		position: absolute;
+		right: 20px;
+		@include v-align;
+		cursor: pointer;
+		z-index: 12;
+		display: none;
+		@include mq(tb){
+			display: block;
+		}
+		span{
+			position: absolute;
+			@include v-align;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #333;
+			border-radius: 3px;
+			&:before,&:after{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #333;
+				content: '';
+				-webkit-transition: -webkit-transform 0.3s;
+				transition: transform 0.3s;
+				border-radius: 3px;
+			}
+			&:before{
+				-webkit-transform: translateY(-250%);
+				transform: translateY(-250%);
+				top: -6px;
+			}
+			&:after{
+				-webkit-transform: translateY(250%);
+				transform: translateY(250%);
+				bottom: -6px;
+			}
+		}
+		&--close {
+			span{
+				background-color: transparent;
+				&:before,&:after{
+					width: 100%;
+					background: #333;
+				}
+				&:before {
+					-webkit-transform: translateY(0) rotate(45deg);
+					transform: translateY(0) rotate(45deg);
+					top: 2px;
+				}
+				&:after {
+					-webkit-transform: translateY(0) rotate(-45deg);
+					transform: translateY(0) rotate(-45deg);
+					bottom: -2px;
+				}
+			}
+		}
+	}
+}
+
+
+.js-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+	body {
+		-webkit-overflow-scrolling: auto;
+	}
+}
