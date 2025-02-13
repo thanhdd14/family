@@ -4,34 +4,34 @@
 	</a>
 	<nav class="header-nav">
 		<ul class="header-nav__menu">
-			<li class="header-nav__menu-item">
-				<a href=""><i class="fa-solid fa-magnifying-glass"></i>Tổng quan</a>
-				<span class="header-nav__menu-sub"></span>
+			<li class="header-nav__menu-item <% if(pageData.template == 'index'){ %> active <% } %>">
+				<a href=""><i class="fa-solid fa-gauge"></i>Dashboard</a>
+				<span class="header-nav__menu-sub <% if(pageData.template == 'index'){ %> active <% } %>"></span>
 				<ul>
 					<li><a href="">Thống kê</a></li>
 					<li><a href="">Lịch trình gọi video</a></li>
 					<li><a href="">Báo cáo hoạt động</a></li>
 				</ul>
 			</li>
-			<li class="header-nav__menu-item active">
+			<li class="header-nav__menu-item <% if(pageData.template == 'danhsach' || pageData.template == 'themmoi' ){ %> active <% } %>">
 				<a href=""><i class="fa-solid fa-user"></i>Quản lý cán bộ</a>
-				<span class="header-nav__menu-sub active"></span>
+				<span class="header-nav__menu-sub <% if(pageData.template == 'danhsach' || pageData.template == 'themmoi' ){ %> active <% } %>"></span>
 				<ul>
 					<li><a href="">Danh sách cán bộ</a></li>
 					<li><a href="">Thêm mới cán bộ</a></li>
 				</ul>
 			</li>
-			<li class="header-nav__menu-item">
+			<li class="header-nav__menu-item <% if(pageData.template == 'danhsach-phamnhan' || pageData.template == 'thongtin-phamnhan'){ %> active <% } %>">
 				<a href=""><i class="fa-solid fa-user"></i>Quản lý phạm nhân</a>
-				<span class="header-nav__menu-sub"></span>
+				<span class="header-nav__menu-sub <% if(pageData.template == 'danhsach-phamnhan' || pageData.template == 'thongtin-phamnhan'){ %> active <% } %>"></span>
 				<ul>
 					<li><a href="">Thêm mới phạm nhân</a></li>
 					<li><a href="">Danh sách phạm nhân</a></li>
 				</ul>
 			</li>
-			<li class="header-nav__menu-item">
+			<li class="header-nav__menu-item <% if(pageData.template == 'danhsach-lichgoi' || pageData.template == 'quanlygoi' || pageData.template == 'quanlygoi2' || pageData.template == 'quanlygoi3'){ %> active <% } %>">
 				<a href=""><i class="fa-solid fa-phone"></i>Quản lý lịch gọi</a>
-				<span class="header-nav__menu-sub"></span>
+				<span class="header-nav__menu-sub <% if(pageData.template == 'danhsach-lichgoi' || pageData.template == 'quanlygoi' || pageData.template == 'quanlygoi2' || pageData.template == 'quanlygoi3'){ %> active <% } %>"></span>
 				<ul>
 					<li><a href="">Tạo mới lịch gọi</a></li>
 					<li><a href="">Danh sách gọi video</a></li>

@@ -1,7 +1,53 @@
 @use "vars" as *;
 
+.c-fc{
+	&-black{
+		color: black !important;
+	}
+	&--white{
+		color: white !important;
+	}
+	&--blue{
+		color: $blue !important;
+	}
+	&--gray{
+		color: $gray !important;
+	}
+	&--dark{
+		color: #333 !important;
+	}
+	&--green{
+		color: $green !important;
+	}
+	&--red{
+		color: red !important;
+	}
+}
 
-
+.c-bg{
+	&-black{
+		background: black !important;
+	}
+	&--white{
+		background: white !important;
+	}
+	&--blue{
+		background: $blue !important;
+	}
+	&--gray{
+		background: $gray !important;
+		color: $dark !important;
+	}
+	&--dark{
+		background: #333 !important;
+	}
+	&--green{
+		background: $green !important;
+	}
+	&--red{
+		background: red !important;
+	}
+}
 
 
 
@@ -24,40 +70,12 @@
 
 
 
-
-
-
-
-
-
-
-/* ====================================================
-Component
-==================================================== */
-// Common Text style
-.c-txt{
-	&__basic{
-
-	}
-}
-
-
-
-
-//ttl
-.c-ttl{
-	&__01{
-
-	}
-
-}
-
 //btn
 .c-btn{
 	&__01{
 		display: inline-block;
 		padding: 10px 23px;
-		border-radius: 10px;
+		border-radius: 5px;
 		@include font-size(18);
 		line-height: 1.4;
 		color: white;
@@ -69,10 +87,15 @@ Component
 		&:hover{
 			opacity: 0.7;
 		}
-		&--dark{
-			background: #4d4a4a;
+		i{
+			display: inline-block;
+			margin: 0 7px 0 0 ;
 		}
 	}
 }
 
+
+.w-100{
+	width: 100% !important;
+}
 

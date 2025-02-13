@@ -18,9 +18,9 @@
 				<a href="./" class="header-logo"> Family Voice </a>
 				<nav class="header-nav">
 					<ul class="header-nav__menu">
-						<li class="header-nav__menu-item active">
+						<li class="header-nav__menu-item">
 							<a href=""><i class="fa-solid fa-gauge"></i>Dashboard</a>
-							<span class="header-nav__menu-sub active"></span>
+							<span class="header-nav__menu-sub"></span>
 							<ul>
 								<li><a href="">Thống kê</a></li>
 								<li><a href="">Lịch trình gọi video</a></li>
@@ -43,9 +43,9 @@
 								<li><a href="">Danh sách phạm nhân</a></li>
 							</ul>
 						</li>
-						<li class="header-nav__menu-item">
+						<li class="header-nav__menu-item active">
 							<a href=""><i class="fa-solid fa-phone"></i>Quản lý lịch gọi</a>
-							<span class="header-nav__menu-sub"></span>
+							<span class="header-nav__menu-sub active"></span>
 							<ul>
 								<li><a href="">Tạo mới lịch gọi</a></li>
 								<li><a href="">Danh sách gọi video</a></li>
@@ -57,9 +57,9 @@
 					</ul>
 				</nav>
 			</header>
-			<main id="page-index">
+			<main id="page-quanlygoi">
 				<div class="heading-note">
-					<h1 class="heading-note__ttl">Tổng quan</h1>
+					<h1 class="heading-note__ttl">Quản lý lịch gọi / Gọi</h1>
 					<div class="heading-note__account">
 						<span class="heading-note__account-name">Nguyễn Văn Toàn</span>
 						<div class="heading-note__account-avatar">
@@ -75,73 +75,69 @@
 				</div>
 				<div class="main-content">
 					<div class="inner">
-						<div class="dashboard">
-							<div class="dashboard-task">
-								<table>
-									<tr>
-										<th>ID</th>
-										<th>Task</th>
-										<th>Thời gian</th>
-										<th>Status</th>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>Lịch gọi 1</td>
-										<td>20/10/2024 8:00 AM</td>
-										<td>Done</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>Lịch gọi 2</td>
-										<td>20/10/2024 8:00 AM</td>
-										<td>Cancel</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Lịch gọi 4</td>
-										<td>20/10/2024 8:00 AM</td>
-										<td>Done</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>Lịch gọi 4</td>
-										<td>20/10/2024 8:00 AM</td>
-										<td>Cancel</td>
-									</tr>
-								</table>
+						<div class="call-block">
+							<div class="call-block--left">
+								<div class="call-block__note">
+									<table>
+										<tr>
+											<th>Tên phạm nhân :</th>
+											<td>Trần Huyền Diệp</td>
+										</tr>
+										<tr>
+											<th>Mã phạm nhân :</th>
+											<td>PN007</td>
+										</tr>
+										<tr>
+											<th>Cán bộ đăng ký :</th>
+											<td>Lý Ngọc Anh</td>
+										</tr>
+										<tr>
+											<th>Cán bộ phụ trách :</th>
+											<td>Vũ Như Ngọc</td>
+										</tr>
+									</table>
+								</div>
+								<div class="call-block__steps">
+									<div class="call-block__steps-item active">
+										<h3 class="call-block__steps-ttl">Bước 1 : Kết nối ứng dụng</h3>
+										<p>Họ và tên : Vũ Thế Ngọc</p>
+										<p>CCCD: 0123456789 - Cấp Ngày 01/01/2020 Tại Hà Nội</p>
+										<ul class="call-block__steps-img">
+											<li>
+												<img src="./img/test.jpg">
+												<span class="call-block__steps-icon c-fc--green"><i class="fa-solid fa-video"></i></span>
+											</li>
+											<li>
+												<img src="./img/avatar.png">
+												<span class="call-block__steps-icon c-fc--green"><i class="fa-solid fa-video"></i></span>
+											</li>
+											<li>
+												<img src="./img/test.jpg">
+												<span class="call-block__steps-icon c-fc--green"><i class="fa-solid fa-video"></i></span>
+											</li>
+										</ul>
+										<span class="call-block__steps-status">Đang nối máy...</span>
+									</div>
+									<div class="call-block__steps-item">
+										<h3 class="call-block__steps-ttl">Bước 2 : Xác thực thông tin</h3>
+										<ul class="call-block__steps-profile">
+											<li>Xác thực Vũ THế Ngọc</li>
+											<li>Kiểm tra xung quanh không có người thứ 2</li>
+										</ul>
+									</div>
+									<div class="call-block__steps-item">
+										<h3 class="call-block__steps-ttl">Bước 3 : Tiến hành cuộc gọi</h3>
+										<ul class="call-block__steps-profile">
+											<li>Gọi điện</li>
+											<li>Lưu thông tin</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="dashboard-table">
-								<table>
-									<tr>
-										<th colspan="7">20/10/2014</th>
-										<th colspan="5">27/10/2024</th>
-									</tr>
-									<tr>
-										<th>M</th>
-										<th>T</th>
-										<th>W</th>
-										<th>T</th>
-										<th>F</th>
-										<th>S</th>
-										<th>S</th>
-										<th>M</th>
-										<th>T</th>
-										<th>W</th>
-										<th>T</th>
-									</tr>
-								</table>
+							<div class="call-block--right">
+								<img src="./img/call.avif">
 							</div>
 						</div>
-						<div class="dashboard-chart"></div>
-						<style>
-							.dashboard-chart {
-								width: 300px;
-								height: 300px;
-								border-radius: 50%;
-								background: conic-gradient(#4040a3 0% 25%,
-										#33a64c 0% 75%);
-							}
-						</style>
 					</div>
 				</div>
 			</main>
